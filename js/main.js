@@ -67,7 +67,7 @@ function suggestPlaces() {
 		return;
 	}
 
-	var url = 'trafiklab-api/place-lookup?searchstring=' + encodeURIComponent(searchstring);
+	var url = 'trafiklab-api/place-lookup.php?searchstring=' + encodeURIComponent(searchstring);
 
 	if (suggestTarget.id != 'page-form-via-form-station-input') {
 		url += '&stationsonly=False';
@@ -87,29 +87,25 @@ function suggestPlaces() {
 
 			if (response.StatusCode != 0) {
 				suggestList.innerHTML = '<li class="card">' +
-				                          '<div class="input-row input-row-last">' +
-				                            '<span class="suggest-list-elem">'
-				                               response.Message + ' (' + response.StatusCode + ')' +
-				                            '</span>'
-				                          '</div>' +
+				                          '<span class="suggest-list-elem">'
+				                             response.Message + ' (' + response.StatusCode + ')' +
+				                          '</span>'
 				                        '</li>';
 			} else {
 				var sites = response.ResponseData;
 
 				for (i in sites) {
 					suggestList.innerHTML += '<li class="card">' +
-					                           '<div class="input-row input-row-last">' +
-					                             '<span class="suggest-list-elem"' +
-					                                   'name="' + sites[i].Name + '" ' +
-					                                   'type="' + sites[i].Type + '" ' +
-					                                   'siteid="' + sites[i].SiteId + '" ' +
-					                                   'x="' + sites[i].X + '" ' +
-					                                   'y="' + sites[i].Y + '" ' +
-					                                   'onclick="selectPlace(this);">' +
-					                               '<p>' + sites[i].Name + '</p>' +
-					                               '<p>' + sites[i].Type + '</p>' +
-					                             '</span>'
-					                           '</div>' +
+					                           '<span class="suggest-list-elem"' +
+					                                 'name="' + sites[i].Name + '" ' +
+					                                 'type="' + sites[i].Type + '" ' +
+					                                 'siteid="' + sites[i].SiteId + '" ' +
+					                                 'x="' + sites[i].X + '" ' +
+					                                 'y="' + sites[i].Y + '" ' +
+					                                 'onclick="selectPlace(this);">' +
+					                             '<p>' + sites[i].Name + '</p>' +
+					                             '<p>' + sites[i].Type + '</p>' +
+					                           '</span>'
 					                         '</li>';
 				}
 			}
@@ -123,7 +119,7 @@ function suggestPlaces() {
 }
 
 function selectPlace(place) {
-	suggestTarget = place.getAttribute('name');
+	suggestTarget.value = place.getAttribute('name');
 	exitSuggestMode();
 }
 

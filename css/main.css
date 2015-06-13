@@ -133,3 +133,24 @@ h1 {
 	border: none;
 	font-size: 16px;
 }
+
+#page-suggest {
+	display: none;
+	flex-direction: column;
+}
+
+.suggest-list-elem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	cursor: pointer;
+	height: 3em;
+}
+
+.suggest-list-elem > p {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
