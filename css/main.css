@@ -1,0 +1,135 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	outline: 0px;
+	font-family: Arial;
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}
+
+body {
+	background-color: rgb(235, 236, 237);
+}
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+#header {
+	display: flex;
+	color: white;
+	background-color: rgb(1, 156, 213);
+}
+
+.card {
+	background-color: white;
+	margin: 0.5em;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+#header-back {
+	cursor: pointer;
+}
+
+#header-title {
+	width: 100%;
+	text-align: center;
+}
+
+#header-menu {
+	cursor: pointer;
+}
+
+/****************************************
+ * Page
+ ****************************************/
+
+#page {
+	display: flex;
+	flex-direction: column;
+}
+
+#page-form {
+	display: flex;
+	flex-direction: column;
+}
+
+#page-form-via-drop {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	color: lightgray;
+	cursor: pointer;
+	height: 3em;
+}
+
+#page-form-via-drop-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin-left: 1em;
+}
+
+#page-form-via-drop-arrow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 1em;
+}
+
+#page-form-via-form {
+	display: none;
+	flex-direction: column;
+	background-color: rgb(245, 246, 247);
+}
+
+#page-form-now {
+	display: flex;
+	flex-direction: row;
+}
+
+#page-form-now-now, #page-form-now-depart {
+	margin-right: 1em;
+}
+
+#page-form-now-now-label,
+#page-form-now-depart-label,
+#page-form-now-arrive-label {
+	padding-left: 0.3em;
+}
+
+.input-row {
+	padding: 0.5em 0.5em 0 0.5em;
+}
+
+.input-row-last {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.input-row > input {
+	padding-left: 1em;
+	height: 3em;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.input-row > button {
+	height: 3em;
+	width: 100%;
+	background-color: rgb(141, 100, 170);
+	color: white;
+	cursor: pointer;
+	border: none;
+	font-size: 16px;
+}

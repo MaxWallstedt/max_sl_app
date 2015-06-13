@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Max' SL App</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1 id="header-back">←</h1>
+      <h1 id="header-back-fake"></h1>
+      <h1 id="header-title">Max' SL App</h1>
+      <h1 id="header-menu">☰</h1>
+    </div>
+    <div id="page">
+      <div id="page-form" class="card">
+        <div id="page-form-origin" class="input-row">
+          <input id="page-form-origin-input" class="input-text" type="text" placeholder="Origin" />
+        </div>
+        <div id="page-form-dest" class="input-row input-row-last">
+          <input id="page-form-dest-input" class="input-text" type="text" placeholder="Destination" />
+        </div>
+        <div id="page-form-via">
+          <div id="page-form-via-drop">
+            <div id="page-form-via-drop-title">Via</div>
+            <div id="page-form-via-drop-arrow">∨</div>
+          </div>
+          <div id="page-form-via-form">
+            <div id="page-form-via-form-station" class="input-row">
+              <input id="page-form-via-form-station-input" class="input-text" type="text" placeholder="Via station" />
+            </div>
+            <div id="page-form-via-form-time" class="input-row input-row-last">
+              <input id="page-form-via-form-time-input" class="input-text" type="number" min="0" placeholder="Via time (minutes)" />
+            </div>
+          </div>
+        </div>
+        <div id="page-form-now" class="input-row">
+          <div id="page-form-now-now">
+            <input id="page-form-now-now-input" type="radio" name="now" checked /><!--
+            --><label id="page-form-now-now-label" for="page-form-now-now-input">Now</label>
+          </div>
+          <div id="page-form-now-depart">
+            <input id="page-form-now-depart-input" type="radio" name="now" /><!--
+            --><label id="page-form-now-depart-label" for="page-form-now-depart-input">Depart</label>
+          </div>
+          <div id="page-form-now-arrive">
+            <input id="page-form-now-arrive-input" type="radio" name="now" /><!--
+            --><label id="page-form-now-arrive-label" for="page-form-now-arrive-input">Arrive</label>
+          </div>
+        </div>
+        <div id="page-form-date" class="input-row">
+          <input id="page-form-date-input" type="date" disabled />
+        </div>
+        <div id="page-form-time" class="input-row">
+          <input id="page-form-time-input" type="time" disabled />
+        </div>
+        <div id="page-form-search" class="input-row input-row-last">
+          <button id="page-form-search-button">Search</button>
+        </div>
+      </div>
+      <div id="page-suggest">
+        <div id="page-suggest-search" class="card">
+          <div id="page-suggest-search-station" class="input-row input-row-last">
+            <input id="page-suggest-search-station-input" class="input-text" type="text" />
+          </div>
+        </div>
+        <!--<ul id="page-suggest-list">
+        </ul>-->
+      </div>
+    </div>
+  </body>
+</html>
