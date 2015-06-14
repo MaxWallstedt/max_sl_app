@@ -66,9 +66,13 @@ h1 {
 	flex-direction: row;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
-	color: lightgray;
 	cursor: pointer;
 	height: 3em;
+	outline-color: lightgray;
+}
+
+#page-form-via-drop:active {
+	background-color: lightgray;
 }
 
 #page-form-via-drop-title {
@@ -145,15 +149,19 @@ h1 {
 	flex-direction: row;
 	justify-content: space-between;
 	cursor: pointer;
-	height: 3em;
+	min-height: 3em;
+	outline-color: lightgray;
+}
+
+.suggest-list-elem:active {
+	background-color: lightgray;
 }
 
 .suggest-list-elem > p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding: 1em;
 }
 
 li {
